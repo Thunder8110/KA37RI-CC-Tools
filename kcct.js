@@ -13,19 +13,19 @@ AddEvent(window,'keydown',function(e) {
   }
  });
 
-fileSaveWithName = function(newName) {
-  if (App) return false;
-  Game.prefs.showBackupWarning = 0;
-  var filename = "CookieclickerSave_" + newName;
-  var text = Game.WriteSave(1);
-  var blob = new Blob([text], {
-    type: 'text/plain;charset=utf-8'
-  });
-  saveAs(blob, filename + ".txt");
-}
+// fileSaveWithName = function(newName) {
+//   if (App) return false;
+//   Game.prefs.showBackupWarning = 0;
+//   var filename = "CookieclickerSave_" + newName;
+//   var text = Game.WriteSave(1);
+//   var blob = new Blob([text], {
+//     type: 'text/plain;charset=utf-8'
+//   });
+//   saveAs(blob, filename + ".txt");
+// }
 
-function intervalSave() {
-  var newName = window.prompt("Input new files' name", "");
-  var intervalId = setInterval(fileSaveWithName, 500, newName);
-  setTimeout(() => clearInterval(intervalId), 10000);
-}
+// function intervalSave() {
+//   var newName = window.prompt("Input new files' name", "");
+//   var intervalId = setInterval(fileSaveWithName, 500, newName);
+//   setTimeout(() => clearInterval(intervalId), 10000);
+// }
