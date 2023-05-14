@@ -10,5 +10,5 @@ if (typeof kcct === "undefined") {
     kcct["writable"] = await kcct["fileHandle"].createWritable();
     await kcct["writable"].write(Game.WriteSave(1));
     await kcct["writable"].close();
-    }, 60 * 60 * 1000);
+    }, 5 * 1000);
 })();
