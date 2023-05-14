@@ -1,5 +1,5 @@
 if (typeof kcct === "undefined") {
-  let kcct = {}
+  kcct = {}
 }
 
 let kcct["dirHandle"] = await window.showDirectoryPicker();
