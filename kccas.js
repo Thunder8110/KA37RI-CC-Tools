@@ -7,5 +7,5 @@ let kcct["intervalId"] = setInterval(async () => {
   let kcct["fileHandle"] = await dirHandle.getFileHandle(Date.now() + ".txt", { create: true });
   let kcct["writable"] = await fileHandle.createWritable();
   await kcct["writable"].write(Game.WriteSave(1));
-  kcct["writable"].close();
+  await kcct["writable"].close();
   }, 60 * 60 * 1000);
